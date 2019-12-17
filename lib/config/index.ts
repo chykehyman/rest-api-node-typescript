@@ -3,10 +3,15 @@ import * as mongoose from 'mongoose';
 interface IMongoDbOptions {
   useNewUrlParser: boolean;
   useCreateIndex: boolean;
+  useUnifiedTopology: boolean;
 }
 
 export default class MongoDBConfig {
-  private dbOptions: IMongoDbOptions = { useNewUrlParser: true, useCreateIndex: true };
+  private dbOptions: IMongoDbOptions = {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+  };
   private db = mongoose.connection;
 
   constructor() {
