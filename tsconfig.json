@@ -1,17 +1,35 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "pretty": true,
-        "sourceMap": true,
-        "target": "es6",
-        "outDir": "./dist",
-        "baseUrl": "./lib"
-    },
-    "include": [
-        "lib/**/*.ts"
+	"compilerOptions": {
+		"target": "es6",
+		"module": "commonjs",
+		"strict": true,
+		"outDir": "./dist",
+		"baseUrl": "./lib",
+		"lib": [
+			"es2015",
+			"dom"
+		],
+		"types": [
+      "node"
     ],
-    "exclude": [
-        "node_modules"
-    ]
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+		"moduleResolution": "node",
+		"pretty": true,
+		"sourceMap": true,
+		"declaration": false,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"importHelpers": true,
+		"removeComments": true,
+	},
+	"include": [
+		"lib/**/*.ts",
+		"./test/**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"./public"
+	]
 }	

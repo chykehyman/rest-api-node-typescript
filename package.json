@@ -20,7 +20,9 @@
     "nodemon": "^2.0.1"
   },
   "devDependencies": {
+    "@types/mongoose": "^5.5.32",
     "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
     "typescript": "^3.7.3"
   }
 }

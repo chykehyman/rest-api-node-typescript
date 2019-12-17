@@ -9,21 +9,21 @@ export class Routes {
     .get((req: Request, resp: Response) => {
       resp.status(200).send({
         message: 'GET request was successful!!!'
-      })
-    })
+      });
+    });
 
-    // Contact 
-    app.route('/contact') 
-    // GET endpoint 
-    .get(this.contactController.getContacts)        
+    // Contact
+    app.route('/contact')
+    // GET endpoint
+    .get(this.contactController.getContacts)
     // POST endpoint
-    .post(this.contactController.addNewContact)
+    .post(this.contactController.addNewContact);
 
     // Contact detail
     app.route('/contact/:contactId')
     // get specific contact
     .get(this.contactController.getContactWithID)
     .put(this.contactController.updateContact)
-    .delete(this.contactController.deleteContact)
+    .delete(this.contactController.deleteContact);
   }
 }
